@@ -8,7 +8,7 @@ A professional full-stack web application that helps users discover delicious re
 
 ## 🌟 Live Demo
 
-🔗 **Repository**: https://github.com/YOUR_USERNAME/smart-recipe-generator  
+🔗 **Repository**: https://github.com/badrish2609/Smart-recipe-generator  
 🚀 **Live Demo**: [Deploy to Vercel/Netlify for live URL]
 
 ---
@@ -65,7 +65,7 @@ A professional full-stack web application that helps users discover delicious re
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/smart-recipe-generator.git
+   git clone https://github.com/badrish2609/Smart-recipe-generator.git
    cd smart-recipe-generator
    ```
 
