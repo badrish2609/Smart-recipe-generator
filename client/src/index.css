@@ -293,7 +293,6 @@ body {
 .tag:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
-}  font-size: 0.9rem;
 }
 
 .tag-remove {
@@ -654,9 +653,6 @@ body {
 
 .recipe-dietary h4::before {
   content: '🥗';
-}
-  margin-bottom: 0.75rem;
-  font-size: 0.9rem;
 }
 
 .recipe-dietary .dietary-tags {
