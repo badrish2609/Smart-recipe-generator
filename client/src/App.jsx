@@ -4,6 +4,7 @@ import './index.css'
 import RecipeCard from './components/RecipeCard'
 
 const API_BASE = import.meta.env.VITE_API_BASE || ''
+const USE_REMOTE_API = Boolean(API_BASE)
 
 function App() {
   const [recipes, setRecipes] = useState([])
@@ -57,38 +58,76 @@ function App() {
       document.body.classList.add('dark-mode')
     }
 
+    const applyRecipeOfTheDay = (data) => {
+      const today = new Date().toDateString()
+      const savedRotd = localStorage.getItem('recipeOfTheDayDate')
+      if (savedRotd !== today) {
+        const randomRecipe = data[Math.floor(Math.random() * data.length)]
+        setRecipeOfTheDay(randomRecipe)
+        localStorage.setItem('recipeOfTheDayDate', today)
+        localStorage.setItem('recipeOfTheDay', JSON.stringify(randomRecipe))
+      } else {
+        const saved = JSON.parse(localStorage.getItem('recipeOfTheDay') || 'null')
+        setRecipeOfTheDay(saved)
+      }
+    }
+
+    const deriveDietaryOptions = (data) => {
+      const all = data.flatMap((recipe) => recipe.dietary || [])
+      return Array.from(new Set(all)).sort()
+    }
+
+    const deriveCuisines = (data) => {
+      const all = data.map((recipe) => recipe.cuisine).filter(Boolean)
+      return Array.from(new Set(all)).sort()
+    }
+
+    const loadLocalData = async () => {
+      const response = await fetch('/recipes.json')
+      if (!response.ok) {
+        throw new Error('Failed to load local recipes')
+      }
+      const data = await response.json()
+      setRecipes(data)
+      setFilteredRecipes(data)
+      applyRecipeOfTheDay(data)
+      setDietaryOptions(deriveDietaryOptions(data))
+      setCuisines(deriveCuisines(data))
+      return data
+    }
+
     const loadData = async () => {
       try {
         setLoading(true)
-        const [recipesRes, dietaryRes, cuisinesRes] = await Promise.all([
-          axios.get(`${API_BASE}/api/recipes`),
-          axios.get(`${API_BASE}/api/dietary-options`),
-          axios.get(`${API_BASE}/api/cuisines`)
-        ])
 
-        setRecipes(recipesRes.data.data)
-        setFilteredRecipes(recipesRes.data.data)
-        
-        // Set recipe of the day (random recipe that changes daily)
-        const today = new Date().toDateString()
-        const savedRotd = localStorage.getItem('recipeOfTheDayDate')
-        if (savedRotd !== today) {
-          const randomRecipe = recipesRes.data.data[Math.floor(Math.random() * recipesRes.data.data.length)]
-          setRecipeOfTheDay(randomRecipe)
-          localStorage.setItem('recipeOfTheDayDate', today)
-          localStorage.setItem('recipeOfTheDay', JSON.stringify(randomRecipe))
+        if (USE_REMOTE_API) {
+          const [recipesRes, dietaryRes, cuisinesRes] = await Promise.all([
+            axios.get(`${API_BASE}/api/recipes`),
+            axios.get(`${API_BASE}/api/dietary-options`),
+            axios.get(`${API_BASE}/api/cuisines`)
+          ])
+
+          setRecipes(recipesRes.data.data)
+          setFilteredRecipes(recipesRes.data.data)
+          applyRecipeOfTheDay(recipesRes.data.data)
+          setDietaryOptions(dietaryRes.data.options)
+          setCuisines(cuisinesRes.data.cuisines)
+
+          const preferencesRes = await axios.get(`${API_BASE}/api/user/preferences`)
+          setSavedRecipes(preferencesRes.data.savedRecipes.map(r => r.id))
         } else {
-          const saved = JSON.parse(localStorage.getItem('recipeOfTheDay') || 'null')
-          setRecipeOfTheDay(saved)
+          await loadLocalData()
         }
-        setDietaryOptions(dietaryRes.data.options)
-        setCuisines(cuisinesRes.data.cuisines)
-
-        // Load saved recipes
-        const preferencesRes = await axios.get(`${API_BASE}/api/user/preferences`)
-        setSavedRecipes(preferencesRes.data.savedRecipes.map(r => r.id))
       } catch (error) {
-        console.error('Error loading data:', error)
+        if (USE_REMOTE_API) {
+          try {
+            await loadLocalData()
+          } catch (localError) {
+            console.error('Error loading local data:', localError)
+          }
+        } else {
+          console.error('Error loading data:', error)
+        }
       } finally {
         setLoading(false)
       }
@@ -128,14 +167,40 @@ function App() {
 
     try {
       setLoading(true)
-      const response = await axios.post(`${API_BASE}/api/recipes/generate`, {
-        ingredients,
-        dietary: selectedDietary,
-        difficulty: selectedDifficulty || null,
-        maxCookingTime: maxCookingTime || null
-      })
+      if (USE_REMOTE_API) {
+        const response = await axios.post(`${API_BASE}/api/recipes/generate`, {
+          ingredients,
+          dietary: selectedDietary,
+          difficulty: selectedDifficulty || null,
+          maxCookingTime: maxCookingTime || null
+        })
+        setFilteredRecipes(response.data.data)
+      } else {
+        const normalizedIngredients = ingredients.map((ing) => ing.toLowerCase())
+        const results = recipes
+          .map((recipe) => {
+            const recipeIngredients = (recipe.ingredients || []).map((ing) => ing.toLowerCase())
+            const matchCount = normalizedIngredients.filter((ing) =>
+              recipeIngredients.some((rIng) => rIng.includes(ing))
+            ).length
+            return { recipe, matchCount }
+          })
+          .filter(({ recipe, matchCount }) => {
+            if (matchCount === 0) return false
+            if (selectedDietary.length > 0) {
+              const recipeDietary = recipe.dietary || []
+              const matchesAll = selectedDietary.every((diet) => recipeDietary.includes(diet))
+              if (!matchesAll) return false
+            }
+            if (selectedDifficulty && recipe.difficulty !== selectedDifficulty) return false
+            if (maxCookingTime && recipe.cookingTime > maxCookingTime) return false
+            return true
+          })
+          .sort((a, b) => b.matchCount - a.matchCount)
+          .map(({ recipe }) => recipe)
 
-      setFilteredRecipes(response.data.data)
+        setFilteredRecipes(results)
+      }
     } catch (error) {
       alert('Error generating recipes: ' + error.message)
     } finally {
@@ -160,6 +225,13 @@ function App() {
     if (!substitutionInput.trim()) return
 
     try {
+      if (!USE_REMOTE_API) {
+        setSubstitutions({
+          ingredient: substitutionInput,
+          substitutions: ['This feature needs the backend. Use the live API for real substitutions.']
+        })
+        return
+      }
       const response = await axios.post(`${API_BASE}/api/recipes/substitutions`, {
         ingredient: substitutionInput
       })
@@ -173,6 +245,10 @@ function App() {
   const handleImageUpload = async (file) => {
     // For demo: use local file URL
     // In production: upload to server and use Clarifai/Google Vision API
+    if (!USE_REMOTE_API) {
+      alert('Image analysis is not available in demo mode. Please use manual ingredients.')
+      return
+    }
     const reader = new FileReader()
     reader.onload = async (e) => {
       try {
@@ -207,10 +283,12 @@ function App() {
       setSavedRecipes(newSaved)
       localStorage.setItem('savedRecipes', JSON.stringify(newSaved))
       
-      await axios.post(`${API_BASE}/api/user/favorites`, {
-        recipeId,
-        rating: 5
-      })
+      if (USE_REMOTE_API) {
+        await axios.post(`${API_BASE}/api/user/favorites`, {
+          recipeId,
+          rating: 5
+        })
+      }
     } catch (error) {
       console.error('Error saving recipe:', error)
     }

@@ -1,0 +1,628 @@
+[
+  {
+    "id": 3,
+    "name": "Chicken Tikka Masala",
+    "cuisine": "Indian",
+    "difficulty": "Medium",
+    "cookingTime": 40,
+    "servings": 4,
+    "ingredients": ["chicken", "yogurt", "cream", "tomato", "onion", "spices", "garlic", "ginger"],
+    "instructions": [
+      "Marinate chicken in yogurt and spices",
+      "Cook chicken until tender",
+      "Prepare sauce with tomato and cream",
+      "Add cooked chicken to sauce",
+      "Simmer for 15 minutes",
+      "Garnish with cilantro"
+    ],
+    "nutrition": {
+      "calories": 380,
+      "protein": 35,
+      "carbs": 12,
+      "fat": 22,
+      "fiber": 2
+    },
+    "dietary": ["gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop",
+    "tags": ["Indian", "chicken", "spiced"]
+  },
+  {
+    "id": 4,
+    "name": "Greek Salad",
+    "cuisine": "Mediterranean",
+    "difficulty": "Easy",
+    "cookingTime": 10,
+    "servings": 2,
+    "ingredients": ["tomato", "cucumber", "feta", "olives", "olive oil", "lemon", "oregano"],
+    "instructions": [
+      "Chop tomatoes and cucumber",
+      "Add olives and feta cheese",
+      "Drizzle with olive oil and lemon",
+      "Sprinkle oregano",
+      "Toss and serve"
+    ],
+    "nutrition": {
+      "calories": 280,
+      "protein": 8,
+      "carbs": 18,
+      "fat": 20,
+      "fiber": 5
+    },
+    "dietary": ["vegetarian", "gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop",
+    "tags": ["salad", "Mediterranean", "healthy"]
+  },
+  {
+    "id": 1,
+    "name": "Classic Spaghetti Carbonara",
+    "cuisine": "Italian",
+    "difficulty": "Medium",
+    "cookingTime": 20,
+    "servings": 4,
+    "ingredients": ["pasta", "eggs", "bacon", "parmesan", "salt", "pepper"],
+    "instructions": [
+      "Cook pasta in salted boiling water",
+      "Fry bacon until crispy",
+      "Mix eggs with grated parmesan",
+      "Combine pasta with bacon",
+      "Add egg mixture and toss quickly",
+      "Season with salt and pepper"
+    ],
+    "nutrition": {
+      "calories": 450,
+      "protein": 18,
+      "carbs": 55,
+      "fat": 16,
+      "fiber": 2
+    },
+    "dietary": [],
+    "imageUrl": "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400&h=300&fit=crop",
+    "tags": ["pasta", "Italian", "quick"]
+  },
+  {
+    "id": 2,
+    "name": "Vegetable Stir Fry",
+    "cuisine": "Asian",
+    "difficulty": "Easy",
+    "cookingTime": 15,
+    "servings": 3,
+    "ingredients": ["broccoli", "carrot", "bell pepper", "soy sauce", "garlic", "ginger", "oil"],
+    "instructions": [
+      "Heat oil in wok",
+      "Add garlic and ginger",
+      "Stir fry broccoli and carrot",
+      "Add bell pepper",
+      "Season with soy sauce",
+      "Serve hot"
+    ],
+    "nutrition": {
+      "calories": 200,
+      "protein": 8,
+      "carbs": 25,
+      "fat": 8,
+      "fiber": 6
+    },
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=300&fit=crop",
+    "tags": ["Asian", "vegetables", "quick"]
+  },
+  {
+    "id": 5,
+    "name": "Beef Tacos",
+    "cuisine": "Mexican",
+    "difficulty": "Easy",
+    "cookingTime": 20,
+    "servings": 4,
+    "ingredients": ["beef", "tortillas", "lettuce", "tomato", "cheese", "sour cream", "cumin"],
+    "instructions": [
+      "Brown beef with cumin",
+      "Warm tortillas",
+      "Add beef to tortillas",
+      "Top with lettuce, tomato, cheese",
+      "Add sour cream",
+      "Serve immediately"
+    ],
+    "nutrition": {
+      "calories": 350,
+      "protein": 25,
+      "carbs": 28,
+      "fat": 18,
+      "fiber": 3
+    },
+    "dietary": [],
+    "imageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop",
+    "tags": ["Mexican", "beef", "quick"]
+  },
+  {
+    "id": 6,
+    "name": "Grilled Salmon",
+    "cuisine": "Mediterranean",
+    "difficulty": "Medium",
+    "cookingTime": 25,
+    "servings": 2,
+    "ingredients": ["salmon", "lemon", "dill", "olive oil", "salt", "pepper", "garlic"],
+    "instructions": [
+      "Season salmon with salt and pepper",
+      "Heat grill",
+      "Grill salmon for 12 minutes",
+      "Serve with lemon and dill",
+      "Drizzle with olive oil"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 42,
+      "carbs": 0,
+      "fat": 16,
+      "fiber": 0
+    },
+    "dietary": ["gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400&h=300&fit=crop",
+    "tags": ["fish", "Mediterranean", "healthy"]
+  },
+  {
+    "id": 7,
+    "name": "Vegetable Curry",
+    "cuisine": "Indian",
+    "difficulty": "Medium",
+    "cookingTime": 35,
+    "servings": 4,
+    "ingredients": ["chickpeas", "coconut milk", "spinach", "onion", "tomato", "curry powder", "garlic"],
+    "instructions": [
+      "Saut\u00e9 onion and garlic",
+      "Add curry powder",
+      "Add tomato and spinach",
+      "Add chickpeas and coconut milk",
+      "Simmer for 20 minutes",
+      "Serve with rice"
+    ],
+    "nutrition": {
+      "calories": 220,
+      "protein": 10,
+      "carbs": 35,
+      "fat": 6,
+      "fiber": 8
+    },
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop",
+    "tags": ["Indian", "vegetarian", "vegan"]
+  },
+  {
+    "id": 8,
+    "name": "Margherita Pizza",
+    "cuisine": "Italian",
+    "difficulty": "Medium",
+    "cookingTime": 30,
+    "servings": 2,
+    "ingredients": ["flour", "yeast", "tomato", "mozzarella", "basil", "olive oil", "salt"],
+    "instructions": [
+      "Prepare pizza dough",
+      "Let dough rise",
+      "Spread tomato sauce",
+      "Add mozzarella",
+      "Bake at 450\u00b0F for 15 minutes",
+      "Top with fresh basil"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 14,
+      "carbs": 45,
+      "fat": 8,
+      "fiber": 2
+    },
+    "dietary": ["vegetarian"],
+    "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop",
+    "tags": ["Italian", "pizza"]
+  },
+  {
+    "id": 9,
+    "name": "Caesar Salad",
+    "cuisine": "American",
+    "difficulty": "Easy",
+    "cookingTime": 15,
+    "servings": 2,
+    "ingredients": ["romaine", "parmesan", "croutons", "eggs", "anchovy", "oil", "lemon"],
+    "instructions": [
+      "Prepare Caesar dressing",
+      "Toss romaine with dressing",
+      "Top with croutons and parmesan",
+      "Optional: add grilled chicken",
+      "Serve immediately"
+    ],
+    "nutrition": {
+      "calories": 300,
+      "protein": 10,
+      "carbs": 15,
+      "fat": 22,
+      "fiber": 3
+    },
+    "dietary": ["vegetarian"],
+    "imageUrl": "https://picsum.photos/400/300?random=9",
+    "tags": ["salad", "American"]
+  },
+  {
+    "id": 10,
+    "name": "Pad Thai",
+    "cuisine": "Thai",
+    "difficulty": "Medium",
+    "cookingTime": 20,
+    "servings": 3,
+    "ingredients": ["rice noodles", "shrimp", "egg", "peanuts", "lime", "fish sauce", "garlic"],
+    "instructions": [
+      "Cook rice noodles",
+      "Prepare sauce with fish sauce and lime",
+      "Stir fry shrimp",
+      "Add noodles and sauce",
+      "Add egg and peanuts",
+      "Toss and serve"
+    ],
+    "nutrition": {
+      "calories": 360,
+      "protein": 20,
+      "carbs": 42,
+      "fat": 12,
+      "fiber": 3
+    },
+    "dietary": ["gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=300&fit=crop",
+    "tags": ["Thai", "Asian", "noodles"]
+  },
+  {
+    "id": 11,
+    "name": "Beef Burger",
+    "cuisine": "American",
+    "difficulty": "Easy",
+    "cookingTime": 15,
+    "servings": 2,
+    "ingredients": ["beef", "bread", "lettuce", "tomato", "cheese", "onion", "condiments"],
+    "instructions": [
+      "Form beef patties",
+      "Grill patties to desired doneness",
+      "Toast bread",
+      "Assemble burger with toppings",
+      "Serve hot"
+    ],
+    "nutrition": {
+      "calories": 520,
+      "protein": 28,
+      "carbs": 40,
+      "fat": 28,
+      "fiber": 2
+    },
+    "dietary": [],
+    "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
+    "tags": ["American", "beef", "quick"]
+  },
+  {
+    "id": 12,
+    "name": "Chocolate Cake",
+    "cuisine": "Dessert",
+    "difficulty": "Medium",
+    "cookingTime": 45,
+    "servings": 8,
+    "ingredients": ["flour", "chocolate", "butter", "eggs", "sugar", "milk", "vanilla"],
+    "instructions": [
+      "Mix dry ingredients",
+      "Cream butter and sugar",
+      "Add eggs and vanilla",
+      "Combine wet and dry mix",
+      "Pour into pan",
+      "Bake at 350\u00b0F for 35 minutes",
+      "Cool before frosting"
+    ],
+    "nutrition": {
+      "calories": 380,
+      "protein": 5,
+      "carbs": 50,
+      "fat": 18,
+      "fiber": 1
+    },
+    "dietary": ["vegetarian"],
+    "imageUrl": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop",
+    "tags": ["dessert", "chocolate"]
+  },
+  {
+    "id": 13,
+    "name": "Minestrone Soup",
+    "cuisine": "Italian",
+    "difficulty": "Easy",
+    "cookingTime": 30,
+    "servings": 4,
+    "ingredients": ["vegetables", "beans", "pasta", "tomato", "broth", "olive oil", "herbs"],
+    "instructions": [
+      "Heat olive oil",
+      "Saut\u00e9 onion and vegetables",
+      "Add broth and tomato",
+      "Add beans and pasta",
+      "Simmer for 20 minutes",
+      "Serve hot"
+    ],
+    "nutrition": {
+      "calories": 180,
+      "protein": 8,
+      "carbs": 28,
+      "fat": 4,
+      "fiber": 6
+    },
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop",
+    "tags": ["soup", "Italian", "healthy"]
+  },
+  {
+    "id": 14,
+    "name": "Fish Tacos",
+    "cuisine": "Mexican",
+    "difficulty": "Medium",
+    "cookingTime": 25,
+    "servings": 3,
+    "ingredients": ["white fish", "tortillas", "cabbage", "lime", "cilantro", "salsa", "cream"],
+    "instructions": [
+      "Season and pan fry fish",
+      "Shred cabbage",
+      "Warm tortillas",
+      "Assemble tacos with fish and cabbage",
+      "Top with salsa and cream",
+      "Serve with lime"
+    ],
+    "nutrition": {
+      "calories": 280,
+      "protein": 28,
+      "carbs": 25,
+      "fat": 8,
+      "fiber": 2
+    },
+    "dietary": ["gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=400&h=300&fit=crop",
+    "tags": ["Mexican", "fish", "quick"]
+  },
+  {
+    "id": 15,
+    "name": "Vegetable Lasagna",
+    "cuisine": "Italian",
+    "difficulty": "Hard",
+    "cookingTime": 60,
+    "servings": 6,
+    "ingredients": ["lasagna noodles", "ricotta", "spinach", "mozzarella", "tomato sauce", "vegetables"],
+    "instructions": [
+      "Cook noodles",
+      "Mix ricotta and spinach filling",
+      "Layer noodles, sauce, and filling",
+      "Top with mozzarella",
+      "Bake at 375\u00b0F for 45 minutes",
+      "Rest before serving"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 18,
+      "carbs": 35,
+      "fat": 12,
+      "fiber": 4
+    },
+    "dietary": ["vegetarian"],
+    "imageUrl": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop",
+    "tags": ["Italian", "vegetarian", "pasta"]
+  },
+  {
+    "id": 16,
+    "name": "Lemon Pasta",
+    "cuisine": "Italian",
+    "difficulty": "Easy",
+    "cookingTime": 20,
+    "servings": 3,
+    "ingredients": ["pasta", "lemon", "garlic", "olive oil", "parmesan", "herbs", "salt"],
+    "instructions": [
+      "Cook pasta",
+      "Saut\u00e9 garlic in olive oil",
+      "Add lemon juice and zest",
+      "Toss with pasta",
+      "Top with parmesan",
+      "Season and serve"
+    ],
+    "nutrition": {
+      "calories": 380,
+      "protein": 14,
+      "carbs": 58,
+      "fat": 8,
+      "fiber": 2
+    },
+    "dietary": ["vegetarian"],
+    "imageUrl": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop",
+    "tags": ["Italian", "pasta", "quick"]
+  },
+  {
+    "id": 17,
+    "name": "Chicken Fried Rice",
+    "cuisine": "Asian",
+    "difficulty": "Medium",
+    "cookingTime": 25,
+    "servings": 4,
+    "ingredients": ["rice", "chicken", "egg", "peas", "carrots", "soy sauce", "garlic"],
+    "instructions": [
+      "Use cold cooked rice",
+      "Cook chicken separately",
+      "Stir fry vegetables",
+      "Add rice and chicken",
+      "Push to side, scramble eggs",
+      "Mix in soy sauce"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 24,
+      "carbs": 38,
+      "fat": 8,
+      "fiber": 2
+    },
+    "dietary": ["gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+    "tags": ["Asian", "rice", "chicken"]
+  },
+  {
+    "id": 18,
+    "name": "Vegetable Soup",
+    "cuisine": "American",
+    "difficulty": "Easy",
+    "cookingTime": 35,
+    "servings": 4,
+    "ingredients": ["carrots", "celery", "onion", "potato", "broth", "tomato", "herbs"],
+    "instructions": [
+      "Chop vegetables",
+      "Heat broth",
+      "Add vegetables",
+      "Simmer for 25 minutes",
+      "Season with herbs",
+      "Serve hot"
+    ],
+    "nutrition": {
+      "calories": 150,
+      "protein": 4,
+      "carbs": 28,
+      "fat": 2,
+      "fiber": 5
+    },
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=400&h=300&fit=crop",
+    "tags": ["soup", "healthy"]
+  },
+  {
+    "id": 19,
+    "name": "Shrimp Scampi",
+    "cuisine": "Italian",
+    "difficulty": "Medium",
+    "cookingTime": 20,
+    "servings": 3,
+    "ingredients": ["shrimp", "pasta", "garlic", "white wine", "olive oil", "lemon", "basil"],
+    "instructions": [
+      "Cook pasta",
+      "Saut\u00e9 garlic",
+      "Add shrimp",
+      "Deglaze with white wine",
+      "Add lemon and basil",
+      "Toss with pasta"
+    ],
+    "nutrition": {
+      "calories": 340,
+      "protein": 28,
+      "carbs": 42,
+      "fat": 6,
+      "fiber": 2
+    },
+    "dietary": ["gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1633504581258-6d2a058c9a4f?w=400&h=300&fit=crop",
+    "tags": ["Italian", "seafood", "pasta"]
+  },
+  {
+    "id": 20,
+    "name": "Caprese Salad",
+    "cuisine": "Italian",
+    "difficulty": "Easy",
+    "cookingTime": 10,
+    "servings": 2,
+    "ingredients": ["tomato", "mozzarella", "basil", "olive oil", "vinegar", "salt", "pepper"],
+    "instructions": [
+      "Slice tomatoes and mozzarella",
+      "Layer alternately",
+      "Add fresh basil",
+      "Drizzle olive oil and vinegar",
+      "Season with salt and pepper",
+      "Serve fresh"
+    ],
+    "nutrition": {
+      "calories": 240,
+      "protein": 12,
+      "carbs": 8,
+      "fat": 18,
+      "fiber": 2
+    },
+    "dietary": ["vegetarian", "gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop",
+    "tags": ["Italian", "salad", "fresh"]
+  },
+  {
+    "id": 21,
+    "name": "Authentic Butter Chicken (Murgh Makhani)",
+    "cuisine": "Indian",
+    "difficulty": "Medium",
+    "cookingTime": 45,
+    "servings": 4,
+    "introduction": "Butter Chicken is one of India's most iconic dishes, originating from Delhi in the 1950s. This creamy, aromatic curry combines tender marinated chicken with a luxurious tomato-based sauce enriched with butter and cream. Perfect for both home cooks and dinner parties, this restaurant-quality dish delivers complex flavors through a harmonious blend of Indian spices. The magic lies in the two-stage cooking process: marinating the chicken for tenderness, then building a deeply flavored sauce that coats each piece beautifully.",
+    "ingredients": [
+      "1 kg chicken breast, cut into bite-sized pieces",
+      "1 cup plain yogurt",
+      "2 tablespoons ginger-garlic paste",
+      "2 tablespoons kasuri methi (dried fenugreek leaves)",
+      "1 teaspoon red chili powder",
+      "1 teaspoon turmeric powder",
+      "1 teaspoon garam masala",
+      "3 tablespoons oil or ghee",
+      "1 large onion, finely diced",
+      "400g canned tomato puree",
+      "200ml heavy cream or Greek yogurt",
+      "4 tablespoons butter",
+      "2 teaspoons honey or sugar",
+      "4-5 green cardamom pods, crushed",
+      "4-5 black cardamom pods, crushed",
+      "1 inch cinnamon stick",
+      "3-4 cloves",
+      "1 bay leaf",
+      "2 green chilies, slit",
+      "Fresh cilantro for garnish",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Marinate the chicken: Mix yogurt, ginger-garlic paste, red chili powder, turmeric, garam masala, and salt. Add chicken pieces and coat well. Cover and refrigerate for at least 30 minutes (or up to 4 hours for deeper flavor).",
+      "Sear the chicken: Heat 2 tablespoons oil in a large skillet over medium-high heat. Working in batches, sear the marinated chicken for 3-4 minutes per side until golden brown. Don't overcrowd the pan. Remove and set aside.",
+      "Temper the spices: In the same pan, heat remaining oil/ghee. Add bay leaf, cardamom pods, cinnamon, and cloves. Let them release their aroma for 30 seconds, stirring constantly.",
+      "Saut\u00e9 the onions: Add diced onions and cook for 6-7 minutes until golden brown and caramelized. This builds the flavor foundation of your sauce.",
+      "Create the base: Add ginger-garlic paste and cook for 2 minutes. Pour in tomato puree and simmer for 4-5 minutes, stirring occasionally. The sauce should darken slightly and the oil should separate from the tomatoes.",
+      "Build the sauce: Add kasuri methi, crushing it between your palms to release flavor. Add honey/sugar to balance the acidity of tomatoes. Stir well.",
+      "Combine and simmer: Return the seared chicken to the pan. Reduce heat to medium and simmer for 12-15 minutes until chicken is cooked through and sauce has thickened slightly.",
+      "Finish with cream and butter: Turn heat to low. Add butter in small pieces, stirring until melted. Slowly pour in cream while stirring to create a silky sauce. Don't boil after adding cream - just heat through.",
+      "Final seasoning: Add green chilies, adjust salt and spice level. Simmer for 2-3 more minutes. The sauce should coat the back of a spoon.",
+      "Garnish and serve: Top with fresh cilantro and a dollop of cream. Serve immediately with basmati rice, naan, or roti."
+    ],
+    "whyItWorks": "This recipe succeeds through three key techniques: First, marinating in yogurt tenderizes the chicken while adding flavor depth. Second, the two-stage cooking (searing then slow-cooking) develops complex flavors through Maillard reaction on the chicken and caramelization of onions. Third, the spice-tempering technique releases essential oils and aromatics that infuse the entire dish. The balance of tangy yogurt, acidic tomatoes, sweet honey, and rich butter creates a sauce that's greater than the sum of its parts.",
+    "commonMistakes": [
+      "Not marinating long enough: Aim for at least 30 minutes; overnight is better. This is crucial for tender, flavorful chicken.",
+      "Overcooking the chicken: Chicken dries out easily. Sear just until golden, then finish cooking in the sauce.",
+      "Boiling the cream: High heat will curdle the cream and break the sauce. Always add cream at the end on low heat.",
+      "Skipping the spice-tempering: Don't skip the initial blooming of cardamom, cinnamon, and cloves - this is where half the flavor comes from.",
+      "Using low-quality spices: Use fresh, good-quality spices. Stale spices will result in a flat-tasting curry.",
+      "Not caramelizing the onions: Rushing this step means missing out on deep, sweet flavors. Take your time here.",
+      "Adding yogurt directly to hot pan: Always marinate separately to avoid curdling. Keep yogurt additions cold.",
+      "Insufficient salt: Taste as you go. Indian cooking requires proper seasoning to bring out all the spice notes."
+    ],
+    "nutrition": {
+      "calories": 520,
+      "protein": 48,
+      "carbs": 18,
+      "fat": 28,
+      "fiber": 2,
+      "calcium": "200mg",
+      "iron": "2mg"
+    },
+    "storageTips": [
+      "Refrigerator: Store in an airtight container for up to 3 days. The flavors actually improve slightly as it sits.",
+      "Freezer: This dish freezes beautifully. Cool completely, then transfer to freezer bags or containers for up to 3 months. Freeze without rice or naan.",
+      "Separating components: For best results when freezing, separate chicken from sauce slightly, ensuring liquid covers chicken to prevent freezer burn.",
+      "Containers: Use glass or BPA-free plastic for storage. Avoid storing in metal containers as the acidity may react with metals over time."
+    ],
+    "reheatingTips": [
+      "Stovetop (best method): Add a splash of water or cream to prevent sticking. Heat on medium for 5-7 minutes, stirring occasionally until heated through. This maintains the sauce's silky texture.",
+      "Microwave: Transfer to a microwave-safe dish, cover loosely, and heat for 2-3 minutes, stirring halfway through. Add a splash of cream if sauce seems too thick.",
+      "From frozen: Thaw overnight in the refrigerator, then reheat using stovetop method. Or reheat directly from frozen on medium-low heat for 12-15 minutes, stirring frequently.",
+      "Important: Never boil the reheated dish as this may cause separation of cream and butter. Gentle heating preserves the luxurious texture."
+    ],
+    "variations": [
+      "Spicy Version: Increase red chili powder to 2 teaspoons, add 1 teaspoon cayenne pepper, and include 2 fresh red chilies. Add these at the beginning for a slow build of heat rather than sharp spice.",
+      "Low-Calorie Version: Use Greek yogurt instead of cream, reduce butter to 2 tablespoons, and use chicken breast (already lower in fat). Nutrition drops to approximately 380 calories while maintaining flavor through extra spices.",
+      "High-Protein Version: Use 1.5 kg chicken, increase Greek yogurt in marinade, and use full-fat Greek yogurt instead of cream. Adds 15g protein per serving without significantly increasing calories.",
+      "Cottage Cheese Version: Substitute half the chicken with paneer (cottage cheese) cubes. Add paneer in the last 3 minutes to prevent it from becoming rubbery.",
+      "Coconut Cream Version: Replace heavy cream with coconut cream for a Southeast Asian twist. Reduce butter slightly and add 1 teaspoon coconut extract for authenticity.",
+      "Extra Creamy Version: Increase cream to 250ml and butter to 5 tablespoons for extra richness. Slightly reduce cooking time to prevent over-reduction.",
+      "Quick Version: Use chicken thighs instead of breast (naturally more moist and forgiving), reduce marinade time to 15 minutes minimum, and use 2 cans of tomato sauce instead of cooking down tomatoes.",
+      "Restaurant Style: Double the butter and cream, add 1/4 teaspoon of saffron threads soaked in warm milk, and garnish with edible gold leaf or dried rose petals for special occasions."
+    ],
+    "dietary": ["gluten-free"],
+    "imageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop",
+    "tags": ["Indian", "chicken", "creamy", "restaurant-quality", "aromatic", "comfort-food"]
+  }
+]
