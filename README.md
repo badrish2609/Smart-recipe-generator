@@ -9,7 +9,7 @@ A professional full-stack web application that helps users discover delicious re
 ## 🌟 Live Demo
 
 🔗 **Repository**: https://github.com/badrish2609/Smart-recipe-generator  
-🚀 **Live Demo**: [Deploy to Vercel/Netlify for live URL]
+🚀 **Live Demo**: https://smart-recipe-generator-five-plum.vercel.app/
 
 ---
 
