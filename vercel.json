@@ -1,4 +1,12 @@
 {
-  "name": "smart-recipe-generator",
-  "version": "1.0.0"
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/dist"
+      }
+    }
+  ]
 }
